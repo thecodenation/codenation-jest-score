@@ -1,0 +1,23 @@
+{
+  "name": "codenation-jest-score",
+  "version": "1.0.0",
+  "description": "Codenation Jest Score Validator",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoventura/codenation-jest-score.git"
+  },
+  "author": "Bruno Ventura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunoventura/codenation-jest-score/issues"
+  },
+  "homepage": "https://github.com/brunoventura/codenation-jest-score#readme"
+}
