@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/brunoventura/codenation-jest-score/issues"
   },
-  "homepage": "https://github.com/brunoventura/codenation-jest-score#readme"
+  "homepage": "https://github.com/brunoventura/codenation-jest-score#readme",
+  "bin": {
+    "jest-score": "bin/index.js"
+  }
 }

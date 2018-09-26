@@ -1,14 +1,23 @@
+#! /usr/bin/env node
+
 const { exec } = require('child_process');
 const { readFileSync } = require('fs');
 
 const TEST_COMMAND = './node_modules/.bin/cross-env CI=true ./node_modules/.bin/react-scripts test --env=jsdom --json 2> /dev/null';
-const DEFAULT_ERROR_MESSAGE = 'Failed executing tests.';
+const error = (msg) => console.error('Failed executing tests - ' + msg);
+
+const path = process.argv[2];
+
+if (!path) {
+    error('You need pass a score map file');
+    process.exit(1);
+}
 
 let scoreMap;
 try {
-    scoreMap = JSON.parse(readFileSync('./score-map.json'));
+    scoreMap = JSON.parse(readFileSync(path));
 } catch (e) {
-    console.error(DEFAULT_ERROR_MESSAGE);
+    error('Cannot load score map file');
     process.exit(1);
 }
 
@@ -17,7 +26,7 @@ const execCallback = (_, stdout) => {
     try {
         testResults = JSON.parse(stdout).testResults;
     } catch (e) {
-        console.error(DEFAULT_ERROR_MESSAGE);
+        error('Cannot execute Jest tests');
         process.exit(1);
     }
 
