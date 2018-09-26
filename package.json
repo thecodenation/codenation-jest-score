@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "Codenation Jest Score Validator",
   "main": "index.js",
-  "dependencies": {
-    "commander": "^2.18.0"
-  },
   "devDependencies": {},
   "scripts": {
     "test": "npm test"

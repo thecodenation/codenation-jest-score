@@ -1,5 +1,3 @@
-#! /usr/bin/env node
-
 const { exec } = require('child_process');
 const { readFileSync } = require('fs');
 
@@ -57,4 +55,6 @@ const execCallback = (_, stdout) => {
     console.log(JSON.stringify({ score }))    
 }
 
-exec(TEST_COMMAND, execCallback);
+module.exports = () => exec(TEST_COMMAND, execCallback);
+
+
