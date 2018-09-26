@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "Codenation Jest Score Validator",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "npm test"
   },
@@ -18,6 +17,6 @@
   },
   "homepage": "https://github.com/brunoventura/codenation-jest-score#readme",
   "bin": {
-    "jest-score": "bin/index.js"
+    "codenation-jest-score": "bin/codenation-jest-score.js"
   }
 }
