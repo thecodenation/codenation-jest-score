@@ -1,6 +1,6 @@
 {
   "name": "codenation-jest-score",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Codenation Jest Score Validator",
   "main": "index.js",
   "dependencies": {
