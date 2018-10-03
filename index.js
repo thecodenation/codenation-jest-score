@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const { readFileSync } = require('fs');
 
-const TEST_COMMAND = './node_modules/.bin/cross-env CI=true ./node_modules/.bin/react-scripts test --env=jsdom --json 2> /dev/null';
+const TEST_COMMAND = 'npm run exec';
 const error = (msg) => console.error('Failed executing tests - ' + msg);
 
 const path = process.argv[2];

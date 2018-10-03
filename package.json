@@ -4,7 +4,8 @@
   "description": "Codenation Jest Score Validator",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "exec": "cross-env CI=true react-scripts test --env=jsdom --json 2> /dev/null"
   },
   "repository": {
     "type": "git",
