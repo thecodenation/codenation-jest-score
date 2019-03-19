@@ -22,7 +22,7 @@ try {
 const execCallback = (_, stdout) => {
     let testResults;
     try {
-        stdout = stdout.toString('utf8').replace(/\n/gi, '').replace(/\\/gi, '/').replace(/\u001b/gi, '')
+        stdout = stdout.toString().replace(/\\n /gi, '').replace(/\\u001b/gi, '').replace(/\\\\/gi, '/')
         testResults = JSON.parse(stdout).testResults;
     } catch (e) {
         error('Cannot execute Jest tests');
