@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const { readFileSync } = require('fs');
 
-const TEST_COMMAND = 'npm run exec --silent';
+const TEST_COMMAND = 'npm run exec';
 const error = (msg) => console.error('Failed executing tests - ' + msg);
 
 const path = process.argv[2];
